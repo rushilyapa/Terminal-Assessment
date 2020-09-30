@@ -31,7 +31,7 @@ Your outline must include:
 - how the user will interact with / use each feature
 - how errors will be handled by the application and displayed to the user
 
-The app is so simple, anyone can use it straight away. Once the user opens the app, they will begin at the menu screen, giving them 3 options. View Packages, Making Booking and Booking an Appointment. When the user clicks on View Packages, they are left with some description of each offering and price. One they have viewed that, the user is allow to either go back to the menu or exit. Make a Booking is straight foward, once user clicks on that, they are left with a a section to fill out their details (Name, Address, Mobile etc)
+The app is so simple, anyone can use it straight away. Once the user opens the app, they will begin at the menu screen, giving them 3 options. View Packages, Making Booking and Booking an Appointment. When the user clicks on View Packages, they are left with some description of each offering and price. One they have viewed that, the user is allow to either go back to the menu or exit. Make a Booking is straight foward, once user clicks on that, they are left with a section to fill out their details (Name, Address, Mobile etc)
 
 
 ### Develop a diagram which describes the control flow of your application. Your diagram must:

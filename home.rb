@@ -1,20 +1,11 @@
-puts "Welcome to Car Spa
-Please select one of the following options:"
+require 'tty-prompt'
+require 'colorize'
 
-loop do
-    options = ["1 - Make Booking", "2 - View Existing Booking", "3 - View Packages"]
-    options.each {|option| puts option}
+puts "Welcome to Car Spa"
+puts "Please select one of the following options:"
 
-  user_input = gets.chomp.to_i
-  case user_input
-  when 1
-    puts "Current balance is $#{balance}"
-  when 2
-    puts "Your current balance is $#{balance}\nHow much would you like to withdraw?"
-    withdrawal_value = gets.chomp.to_i
-
-    if withdrawal_value > balance
-      puts "Error: you're broke! Time to fix your life"
-    else
-    balance -= withdrawal_value
-  end
+# loop do
+options = ["1 - View Packages", "2 - Make Booking", "3 - View Existing Booking"]
+options.each {|option| puts option}
+#     end
+# end
