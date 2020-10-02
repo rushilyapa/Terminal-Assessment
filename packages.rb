@@ -12,3 +12,5 @@ rows << ['Platinum', $100 ]
 table = Terminal::Table.new :title => "Packages", :headings => ['Item', 'Price'], :rows => rows
 
 puts table
+
+puts "If you found a package that suits you,"
