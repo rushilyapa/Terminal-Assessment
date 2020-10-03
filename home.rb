@@ -14,6 +14,7 @@ require 'terminal-table'
     ▀███▀     █   █                   █       █ 
              █   ▀                     ▀     █  
             ▀                               ▀   ".colorize(:red)
+    puts "Book Your Next Wash in under 60 seconds!" 
     puts "--------------------------------------------------------------------------"
     puts "Please select from one of the following:"
     
