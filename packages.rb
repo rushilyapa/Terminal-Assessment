@@ -5,6 +5,7 @@ require_relative './existing_booking.rb'
 require 'terminal-table'
 require 'colorize'
 
+def table
 rows = []
 rows << ['Silver - Wash', 45 ]
 rows << ['Gold', 60 ]
@@ -16,3 +17,4 @@ puts table
 prompt = TTY::Prompt.new
 
 prompt.yes?("If you found a package that suits you, would you like to make a booking?")
+end
