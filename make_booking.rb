@@ -1,13 +1,8 @@
 require_relative './packages.rb'
-require_relative './make_booking.rb'
-require_relative './existing_booking.rb'
 
 require "colorize"
-require "tty-prompt"
 
-prompt = TTY::Prompt.new
-
-# User Enter's their details
+# User infomation
 class Booking
     # attr_reader :name, :mobile, :address, :make, :model
     attr_accessor :name, :mobile, :address, :make, :model, :package

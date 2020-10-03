@@ -1,15 +1,16 @@
-require_relative './packages.rb'
 require_relative './make_booking.rb'
-require_relative './existing_booking.rb'
 
 require 'terminal-table'
 require 'colorize'
+require "tty-prompt"
+
+# Packages in a Tablet format
 
 def table
 rows = []
-rows << ['Silver - Wash', 45 ]
-rows << ['Gold', 60 ]
-rows << ['Platinum', 100 ]
+rows << ['Silver - Basic Wash Only', 35 ]
+rows << ['Gold - Complete Wash and Vacuum', 55 ]
+rows << ['Platinum - Complete Wash, Vacuum and Hand Polish', 100 ]
 table = Terminal::Table.new :title => "Packages", :headings => ['Item', 'Price $'], :rows => rows
 
 puts table

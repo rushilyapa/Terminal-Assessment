@@ -1,15 +1,23 @@
 require_relative './packages.rb'
 require_relative './make_booking.rb'
-require_relative './existing_booking.rb'
 
-require 'tty-prompt'
 require 'colorize'
+require 'terminal-table'
 
+# Welcome Message
 
-    puts "Welcome to Car Spa".colorize(:red)
-    puts "Please select from one of the following"
+    puts "WELCOME TO".colorize(:red)
+    puts "▄█▄    ██   █▄▄▄▄        ▄▄▄▄▄   █ ▄▄  ██   
+    █▀ ▀▄  █ █  █  ▄▀       █     ▀▄ █   █ █ █  
+    █   ▀  █▄▄█ █▀▀▌      ▄  ▀▀▀▀▄   █▀▀▀  █▄▄█ 
+    █▄  ▄▀ █  █ █  █       ▀▄▄▄▄▀    █     █  █ 
+    ▀███▀     █   █                   █       █ 
+             █   ▀                     ▀     █  
+            ▀                               ▀   ".colorize(:red)
+    puts "--------------------------------------------------------------------------"
+    puts "Please select from one of the following:"
     
-
+# Menu Selection
     options = ["1 - View Packages", "2 - Make Booking", "3 - View Existing Booking", "4 - Exit"]
     options.each {|option| puts option}
     
@@ -19,23 +27,25 @@ require 'colorize'
     
     
         case user_select
+        # Display's the car wash packages
         when 1
             puts table
             options = ["1 - View Packages", "2 - Make Booking", "3 - View Existing Booking", "4 - Exit"]
             options.each {|option| puts option}
             user_select = gets.chomp.to_i
+        # User enter's their details
         when 2
             puts "Please enter your name"
             user1_name = gets.chomp
             puts "Please enter your mobile number"
             user1_mobile = gets.chomp.to_i
-            puts "PLease enter your address"
+            puts "Please enter your address"
             user1_address = gets.chomp
             puts "Please enter the make of your car"
             user1_make = gets.chomp
             puts "Please enter the model of your car"
             user1_model = gets.chomp
-            puts "Please enter what package you'd like (Silver, Gold or Platinum"
+            puts "Please enter what package you'd like (Silver, Gold or Platinum)"
             user1_package = gets.chomp.downcase
             until user1_package == "silver" or user1_package == "gold" or user1_package == "platinum"
                 puts "Please type Silver, Gold, or Platinum"
@@ -49,18 +59,21 @@ require 'colorize'
             if user1 == nil
                 puts "No bookings have been made, please make a booking in the main selection".colorize(:red)
             else 
-                puts "name = #{user1.name}"
-                puts "Mobile number = 0#{user1.mobile}"
-                puts "Address = #{user1.address}"
-                puts "Car model = #{user1.model}"
-                puts "Car make = #{user1.make}"
-                puts "Selected Package = #{user1.package}"
+                    rows = []
+                    rows << ["Name = #{user1.name}"]
+                    rows << ["Mobile Number = 0#{user1.mobile}"]
+                    rows << ["Car Make = #{user1.make}"]
+                    rows << ["Car Model = #{user1.model}"]
+                    rows << ["Selected Package = #{user1.package}"]
+                    table = Terminal::Table.new :title => "Booking", :rows => rows
+                    
+                    puts table
             end
             options = ["1 - View Packages", "2 - Make Booking", "3 - View Existing Booking", "4 - Exit"]
             options.each {|option| puts option}
             user_select = gets.chomp.to_i
         when 4
-            puts "Thanks for using our car wash"
+            puts "Thanks for using Car Spa"
             exit
             
         end

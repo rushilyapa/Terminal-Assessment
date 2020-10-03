@@ -17,13 +17,13 @@ Note: Ensure that your features above allow you to demonstrate your understandin
 - loops and conditional control structures
 - error handling
   
-* Menu - The menu lets you play with what the app can do. It allows the user to have a place
+* Menu - The menu is the home page for the app. From here you can select the following listed below.
+
+* View packges - 
   
-* Booking an appointment -
+* Book an appointment -
   
 * View existing booking - 
-  
-* View packges - 
 
 ### Develop an outline of the user interaction and experience for the application.
 Your outline must include:
