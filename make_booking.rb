@@ -8,14 +8,15 @@ require "tty-prompt"
 prompt = TTY::Prompt.new
 
 # User Enter's their details
-result = prompt.collect do
-    key(:name).ask("Name?")
-  
-    key(:mobile).ask("Mobile?", convert: :int)
-  
-    key(:address) do
-    key(:number).ask("Number?")
-      key(:street).ask("Street?", required: true)
-      key(:city).ask("City?")
+class Booking
+    attr_reader :mobile, :address, :make, :model
+    attr_accessor :name
+    
+    def initialize(name, mobile, address, make, model)
+    @name = name
+    @mobile = mobile
+    @address = address
+    @make = make
+    @model = model 
     end
 end

@@ -6,11 +6,13 @@ require 'terminal-table'
 require 'colorize'
 
 rows = []
-rows << ['Silver', $45 ]
-rows << ['Gold', $60 ]
-rows << ['Platinum', $100 ]
-table = Terminal::Table.new :title => "Packages", :headings => ['Item', 'Price'], :rows => rows
+rows << ['Silver - Wash', 45 ]
+rows << ['Gold', 60 ]
+rows << ['Platinum', 100 ]
+table = Terminal::Table.new :title => "Packages", :headings => ['Item', 'Price $'], :rows => rows
 
 puts table
 
-puts "If you found a package that suits you,"
+prompt = TTY::Prompt.new
+
+prompt.yes?("If you found a package that suits you, would you like to make a booking?")
