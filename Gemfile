@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+git_source(:github) {|Terminal-Assessment| "https://github.com/rushilyapa/Terminal-Assessment" }
 
 #gem "rails"
 
@@ -11,4 +11,6 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
  gem "colorize"
 
  gem "terminal-table"
+
+ gem "rspec"
  

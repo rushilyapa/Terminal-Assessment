@@ -14,19 +14,19 @@ require 'terminal-table'
     ▀███▀     █   █                   █       █ 
              █   ▀                     ▀     █  
             ▀                               ▀   ".colorize(:red)
-    puts "Book Your Next Wash in under 60 seconds!" 
+    puts "Book Your Next Wash in under 60 seconds!".colorize(:blue) 
     puts "--------------------------------------------------------------------------"
     puts "Please select from one of the following:"
     
 # Menu Selection
+
+    #loop do
     options = ["1 - View Packages", "2 - Make Booking", "3 - View Existing Booking", "4 - Exit"]
     options.each {|option| puts option}
-    
+    #end
     user_select = gets.chomp.to_i
     until user_select == 4 
-    
-    
-    
+
         case user_select
         # Display's the car wash packages
         when 1
@@ -76,6 +76,5 @@ require 'terminal-table'
         when 4
             puts "Thanks for using Car Spa"
             exit
-            
         end
     end
