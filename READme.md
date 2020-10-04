@@ -20,7 +20,7 @@ The app is so simple, anyone can use it straight away. When the user opens the a
 
 ### FlowChart
 
-<img src="./CarSpaFlowChart.png"/> 
+<img src="../CarSpaFlowChart.png"/> 
 
 ### Implementation plan
 
